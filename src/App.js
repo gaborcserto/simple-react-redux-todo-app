@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
+import { Container, Card, CardActions, CardContent } from '@material-ui/core';
 import Header from './components/todoHeader'
 import Footer from './components/todoFooter'
 import AddTodo from './containers/addTodo'
@@ -10,10 +10,16 @@ import './App.scss';
 function App() {
 	return (
 		<Container maxWidth="sm" id="main" className="App">
-			<Header />
-			<AddTodo />
-			<VisibleTodoList />
-			<Footer />
+			<Card className="todo-app">
+				<CardContent>
+					<Header />
+					<AddTodo />
+					<VisibleTodoList />
+				</CardContent>
+				<CardActions>
+					<Footer />
+				</CardActions>
+			</Card>
 		</Container>
 	);
 }

@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ListItem, ListItemText } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
-import CheckBoxIcon from '@material-ui/icons/CheckBox';
+import CheckBoxOutlinedIcon from '@material-ui/icons/CheckBoxOutlined';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 
 const todoListItem = ({clicked, completed, text, deleted}) => (
-	<ListItem>
+	<ListItem button>
 		<span className="icon" aria-hidden="true">
-			{completed ? <CheckBoxIcon /> : <CheckBoxOutlineBlankIcon />}
+			{completed ? <CheckBoxOutlinedIcon /> : <CheckBoxOutlineBlankIcon />}
 		</span>
 		<ListItemText
 			onClick={clicked}

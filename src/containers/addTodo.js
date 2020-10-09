@@ -2,6 +2,7 @@ import React from "react";
 import { useTodosStore } from "../stores/todosStore";
 import withHooks from "../withHooks";
 import { Input, Button } from '@material-ui/core';
+import AddCircleOutlinedIcon from '@material-ui/icons/AddCircleOutlined';
 
 const AddTodo = props => {
   let input;
@@ -18,8 +19,17 @@ const AddTodo = props => {
           input.value = "";
         }}
       >
-        <Input inputRef={node => (input = node)}/>
-        <Button type="submit" color="primary">Add Todo</Button>
+        <Input fullWidth inputRef={node => (input = node)}/>
+        <Button
+            className="btn-todo"
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+            endIcon={<AddCircleOutlinedIcon />}
+        >
+            Add Todo
+        </Button>
       </form>
     </div>
   );
