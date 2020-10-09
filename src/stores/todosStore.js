@@ -1,5 +1,6 @@
 import createStore from "./createStore";
 import produce from "immer";
+//import { v4 } from "uuid"
 
 let nextTodoId = 0;
 
@@ -28,6 +29,15 @@ let [TodosStoreProvider, useTodosStore] = createStore(
 				})
 			);
 		};
+
+		/*const updateTodo = (index, value) => {
+			setState(
+				produce(draft => {
+					draft[index] = value;
+					return draft;
+				})
+			);
+		}*/
 
 		const deleteTodo = index => {
 			setState(
