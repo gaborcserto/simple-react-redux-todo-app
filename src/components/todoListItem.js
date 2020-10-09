@@ -6,7 +6,7 @@ import CheckBoxOutlinedIcon from '@material-ui/icons/CheckBoxOutlined';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 
 const todoListItem = ({clicked, completed, text, deleted}) => (
-	<ListItem button>
+	<ListItem button className={completed ? 'completed' : null}>
 		<span className="icon" aria-hidden="true">
 			{completed ? <CheckBoxOutlinedIcon /> : <CheckBoxOutlineBlankIcon />}
 		</span>
